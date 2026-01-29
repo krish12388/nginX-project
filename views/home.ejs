@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%- include ('../partials/header.ejs') %> 
+  </head>
+  <body>
+    <div
+      class="w-full h-full flex flex-col justify-center items-center bg-linear-to-b from-slate-800 to-slate-950 p-3.5 "
+    >
+    <%- include ('../partials/nav.ejs') %> 
+    <div>
+    <div class="homecontainer1 h-screen w-full flex flex-col  md:flex-row justify-around items-center ">
+      <img src="https://assets-configurator.chess.com/image/configurator/chessboard_1768166350728.gif" alt="" class="h-[250px] w-[250px]  md:h-[350px] md:w-[350px] ">
+        <div class="homecontent max-h-full flex items-center justify-center  flex-col  md:flex-col gap-2">
+          <h1
+          class=" text-3xl md:text-5xl  align-middle text-center font-extrabold bg-transparent text-amber-50 font-serif stroke-amber-300"
+        >
+        Play Chess Online on the #1 Site!
+        </h1>
+        <h2 class="bg-transparent max-h-full max-w-[70%] text-xl text-amber-50 font-serif stroke-amber-300">
+         Join 230+ million players in the world's largest chess community
+        </h2>
+        <div class="flex flex-row mt-4  md:flex-row gap-4 items-center justify-between">
+          <button type="submit"  class="inline-flex items-center h-16 w-28 text-xl bg-blue-400 hover:duration-300 rounded-xl  text-white bg-brand hover:bg-blue-800 box-border border border-transparent focus:ring-2 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base px-4 py-2.5 focus:outline-none">
+            <a href="/user/login">login</a>
+          <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+          </svg>
+          <button type="submit"  class="inline-flex items-center h-16 w-28 text-xl bg-blue-400 hover:duration-300 rounded-xl  text-white bg-brand hover:bg-blue-800 box-border border border-transparent focus:ring-2 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base px-4 py-2.5 focus:outline-none">
+            <a href="/user/signup">signup</a>
+          <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+          </svg>
+        </div>
+        </div>
+      </div>
+    <div class="homecontainer2 mt-4 md:mt-0 h-screen w-full flex flex-col  md:flex-row justify-around items-center ">
+      <div class="homecontent max-h-full flex items-center justify-center  flex-col  md:flex-col gap-2">
+          <h1
+          class=" text-3xl md:text-5xl  align-middle text-center font-extrabold bg-transparent text-amber-50 font-serif stroke-amber-300"
+        >
+        Play with community of experts!!
+        </h1>
+        <h2 class="bg-transparent max-h-full max-w-[70%] text-xl text-amber-50 font-serif stroke-amber-300">
+          230+ million players in the world's largest chess community
+        </h2>
+        <button type="submit"  class="inline-flex mt-4 items-center h-16 w-32 text-xl bg-blue-400 hover:duration-300 rounded-xl  text-white bg-brand hover:bg-blue-800 box-border border border-transparent focus:ring-2 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base px-4 py-2.5 focus:outline-none">
+            <a href="/user/login">Join Room</a>
+          <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+          </svg>
+      </div>
+      <img src="https://assets-configurator.chess.com/image/configurator/bots_1765899028922.webp" alt="" class="h-[250px] w-[250px]  md:h-[350px] md:w-[350px] ">
+      </div>
+    <div class="homecontainer3 mt-4 md:mt-0 h-screen w-full flex flex-col  md:flex-row justify-around items-center ">
+      <img src="https://assets-configurator.chess.com/image/configurator/puzzles_1765899040725.webp" alt="" class="h-[250px] w-[250px]  md:h-[350px] md:w-[350px] ">
+      <div class="homecontent max-h-full flex items-center justify-center  flex-col  md:flex-col gap-2">
+          <h1
+          class=" text-3xl md:text-5xl  align-middle text-center font-extrabold bg-transparent text-amber-50 font-serif stroke-amber-300"
+        >
+        Level Up With Chess Puzzles
+        </h1>
+        <h2 class="bg-transparent max-h-full max-w-[70%] text-xl text-amber-50 font-serif stroke-amber-300">
+          Sharpen your skills and improve your game with thousands of puzzles.
+        </h2>
+      </div>
+      </div>
+    <div class="homecontainer4 mt-4 md:mt-0 h-screen w-full flex flex-col  md:flex-row justify-around items-center ">
+      <div class="homecontent max-h-full flex items-center justify-center  flex-col  md:flex-col gap-2">
+          <h1
+          class=" text-3xl md:text-5xl  align-middle text-center font-extrabold bg-transparent text-amber-50 font-serif stroke-amber-300"
+        >
+       Watch the Best in the World Compete
+
+        </h1>
+        <h2 class="bg-transparent max-h-full max-w-[70%] text-xl text-amber-50 font-serif stroke-amber-300">
+          Tune into live events, and follow top players move-by-move with real-time analysis.
+        </h2>
+      </div>
+      <img src="https://assets-configurator.chess.com/image/configurator/watch_1765899051211.webp" alt="" class="h-[250px] w-[250px]  md:h-[350px] md:w-[350px] ">
+      </div>
+      </div>
+      <%- include ('../partials/footer.ejs') %> 
+    </div>
+  </body>
+</html>

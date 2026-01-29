@@ -7,12 +7,16 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
     "chess.js": "^1.4.0",
+    "ejs": "^4.0.1",
     "express": "^5.2.1",
     "nodemon": "^3.1.11",
-    "socket.io": "^4.8.3"
+    "socket.io": "^4.8.3",
+    "tailwindcss": "^4.1.18"
   }
 }
