@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../partials/header.ejs') %>
+  </head>
+  <body>
+    <div
+      class="w-full h-screen flex flex-col items-center justify-center gap-10 bg-linear-to-b from-slate-800 to-slate-950 p-4"
+    >
+      <%- include ('../partials/nav.ejs') %>
+      <h1 class="text-3xl text-center text-amber-50 font-bold">Signup</h1>
+      <form
+        class="flex flex-col items-center text-black backdrop-opacity-20 bg-white/60 border-2 border-white/50 backdrop-blur-lg gap-2 p-2 rounded-lg"
+        id="signupForm"
+        action="/user/signup"
+        method="post"
+      >
+        <label for="username" class="text-xl font-bold">Username</label>
+        <input type="text" name="username" class="border-2 border-white/50 p-2 rounded-lg" placeholder="Username" required />
+        <label for="email" class="text-xl font-bold">Email</label>
+        <input type="email" name="email" class="border-2 border-white/50 p-2 rounded-lg" placeholder="Email" required />
+        <label for="password" class="text-xl font-bold">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="border-2 border-white/50 p-2 rounded-lg"
+          placeholder="Password"
+          required
+        />
+        <button type="submit" class="text-xl font-bold text-amber-100 bg-blue-500 hover:bg-blue-600 p-2 rounded-lg">Signup</button>
+      </form>
+      <%- include ('../partials/footer.ejs') %>
+    </div>
+  </body>
+</html>
