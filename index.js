@@ -3,7 +3,10 @@ const path = require("node:path");
 const userRoute = require("./routes/userRoute");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
+const authenticate = require("./middleware/authenticate");
 const app = express();
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 dotenv.config({ path: "./.env" }); 
@@ -18,7 +21,7 @@ mongoose
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
-app.get("/", (req, res, next) => {
+app.get("/",authenticate, (req, res, next) => {
   res.render("home");
 });
 app.use("/user", userRoute);
