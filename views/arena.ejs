@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../partials/header.ejs') %>
+    <title>Arena</title>
+  </head>
+  <body>
+    <%- include ('../partials/nav.ejs') %>
+    <div
+      class="w-full min-h-screen flex flex-col bg-linear-to-b from-slate-800 to-slate-950 p-3.5"
+    >
+      <div
+        class="grow flex flex-col md:flex-row justify-center items-center gap-8 mt-4 md:mt-0 p-4"
+      >
+        <!-- card 1 -->
+        <div class="flex flex-col items-center justify-center">
+          <div
+            class="bg-slate-700/50 p-4 rounded-xl border border-slate-600 shadow-lg text-center backdrop-blur-sm hover:bg-slate-700/70 transition duration-300"
+          >
+            <h1 class="text-4xl font-bold text-white">Arena</h1>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="flex flex-col items-center justify-center">
+          <div
+            class="bg-slate-700/50 p-4 rounded-xl border border-slate-600 shadow-lg text-center backdrop-blur-sm hover:bg-slate-700/70 transition duration-300"
+          >
+            <h2 class="text-2xl font-bold text-white">Room ID:</h2>
+            <h3 class="text-xl font-bold text-white">Room Code:</h3>
+          </div>
+        </div>
+      </div>
+      <div id="chessboard">
+        <div id="square"></div>
+      </div>
+    </div>
+    <%- include ('../partials/footer.ejs') %>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/arena.js"></script>
+</html>

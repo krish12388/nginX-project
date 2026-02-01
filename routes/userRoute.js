@@ -39,10 +39,9 @@ router.post("/login", async (req, res) => {
     httpOnly: true,
     secure: false, // true in production (HTTPS)
   });
-
-  return res.redirect("/");
+  const user = existingUser;
+  return res.render("room", { user });
 });
-
 
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
@@ -54,5 +53,9 @@ router.post("/signup", async (req, res) => {
     console.log("User creation failed");
     return res.status(401).redirect("/user/signup");
   }
+});
+router.get("/logout", (req, res) => {
+  res.clearCookie("uuid");
+  return res.redirect("/");
 });
 module.exports = router;
