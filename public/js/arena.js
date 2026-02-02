@@ -1,7 +1,10 @@
-const socket = io();
+import { renderBoard } from "./chessLogic.js";
+const boardElement = document.getElementById("chessboard");
+
+if (!boardElement) {
+  console.error("❌ chessboard div not found");
+}
+
 const chess = new Chess();
 
-socket.on("connect", () => {
-  socket.emit("join-room", "room1");
-  console.log("Connected to server via Socket.io");
-});
+renderBoard(chess, boardElement);

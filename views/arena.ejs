@@ -2,6 +2,34 @@
 <html lang="en">
   <head>
     <%- include ('../partials/header.ejs') %>
+
+    <style>
+      #chessboard {
+        width: 240px;
+        height: 240px;
+        background-color: #f0d9b5;
+        display: grid;
+        grid-template-columns: repeat(8, 30px);
+        grid-template-rows: repeat(8, 30px);
+        border: 2px solid black;
+        margin: auto;
+      }
+      .square {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        border: 2px solid black;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+      .white {
+        background: #f0d9b5;
+      }
+      .black {
+        background: #844c1e;
+      }
+    </style>
     <title>Arena</title>
   </head>
   <body>
@@ -30,12 +58,9 @@
           </div>
         </div>
       </div>
-      <div id="chessboard">
-        <div id="square"></div>
-      </div>
+      <div id="chessboard"></div>
     </div>
+    
     <%- include ('../partials/footer.ejs') %>
   </body>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/js/arena.js"></script>
 </html>

@@ -7,18 +7,12 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const authenticate = require("./middleware/authenticate");
-
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
-io.on("connection", (socket) => {
-  socket.on("join-room", (roomId) => {
-    console.log(roomId);
-    
-    console.log("a user joined room");
-  });
-  console.log("a user connected");
-});
+// io.on("connection", (socket) => {
+//   console.log("a user connected");
+// });
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
