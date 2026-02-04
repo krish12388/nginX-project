@@ -10,9 +10,6 @@ const authenticate = require("./middleware/authenticate");
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
-// io.on("connection", (socket) => {
-//   console.log("a user connected");
-// });
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));

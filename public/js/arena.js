@@ -1,4 +1,5 @@
 import { renderBoard } from "./chessLogic.js";
+import { Chess } from "chess.js";
 const boardElement = document.getElementById("chessboard");
 
 if (!boardElement) {
