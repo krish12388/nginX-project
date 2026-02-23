@@ -33,7 +33,29 @@ export function renderBoard(chess, boardElement) {
     });
   });
 }
+export function setupBoardListeners(chess, boardElement) {
+  boardElement.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
 
+  boardElement.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const rect = boardElement.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const colIndex = Math.floor(x / (rect.width / 8));
+    const rowIndex = Math.floor(y / (rect.height / 8));
+    
+    if (sourceSquare && draggedpiece) {
+      const from = String.fromCharCode(97 + sourceSquare.file) + (8 - sourceSquare.rank);
+      const to = String.fromCharCode(97 + colIndex) + (8 - rowIndex);
+      const moveObj = { from, to, promotion: "q" };
+      movePiece(chess, moveObj);
+      sourceSquare = null;
+      draggedpiece = null;
+    }
+  });
+}
 export function getpiece(){
 
 }
